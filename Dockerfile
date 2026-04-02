@@ -23,7 +23,7 @@ COPY --from=builder /app/pocketbase /usr/local/bin/pocketbase
 # Tạo thư mục lưu data
 RUN mkdir -p /pb_data
 
-EXPOSE 8080
+EXPOSE 8090
 
 # Command mặc định
 CMD ["pocketbase", "serve", "--http=0.0.0.0:8090", "--dir=/pb_data"]
